@@ -6,6 +6,5 @@ def solution(arr, k):
     if len(answer) >= k:
         answer = answer[:k]
     else:
-        while len(answer) < k:
-            answer.append(-1)
+        answer = answer + [-1] * (k - len(answer))
     return answer
