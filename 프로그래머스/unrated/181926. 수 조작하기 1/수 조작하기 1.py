@@ -1,11 +1,5 @@
 def solution(n, control):
+    dict = {'w': 1, 's': -1, 'd': 10, 'a': -10}
     for c in control:
-        if c == 'w':
-            n += 1
-        elif c == 's':
-            n -= 1
-        elif c == 'd':
-            n += 10
-        else:
-            n -= 10
+        n += dict[c]
     return n
