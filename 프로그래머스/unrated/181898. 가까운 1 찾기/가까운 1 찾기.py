@@ -1,7 +1,9 @@
 def solution(arr, idx):
+    answer = 0
     
-    for i, value in enumerate(arr):
-        if i >= idx and value == 1:
-            return i
-        
-    return -1
+    try:
+        answer = arr.index(1, idx)
+    except:
+        answer = -1
+    
+    return answer
