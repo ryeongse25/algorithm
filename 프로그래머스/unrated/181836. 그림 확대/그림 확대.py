@@ -3,8 +3,8 @@ def solution(picture, k):
     
     for line in picture:
         new_line = ''
-        for i in line:
-            new_line += i * k
+        for c in line:
+            new_line += c * k
         for i in range(k):
             answer.append(new_line)
             
