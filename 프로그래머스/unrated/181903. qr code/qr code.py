@@ -1,8 +1,9 @@
 def solution(q, r, code):
-    answer = ''
+#     answer = ''
     
-    for i in range(len(code)):
-        if i % q == r:
-            answer += code[i]
+#     for i in range(len(code)):
+#         if i % q == r:
+#             answer += code[i]
     
-    return answer
+#     return answer
+    return code[r::q]
