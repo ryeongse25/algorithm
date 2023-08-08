@@ -1,9 +1,11 @@
 def solution(arr, queries):
-    answer = [-1] * len(queries)
-    for i, (s, e, k) in enumerate(queries):
-        for j in range(s, e+1):
-            if arr[j] > k:
-                if answer[i] == -1 or arr[j] < answer[i]:
-                    answer[i] = arr[j]
+    answer = []
+    
+    for s, e, k in queries:
+        tmp = []
+        for i in range(s, e+1):
+            if arr[i] > k:
+                tmp.append(arr[i])
+        answer.append(-1 if not tmp else min(tmp))
                 
     return answer
