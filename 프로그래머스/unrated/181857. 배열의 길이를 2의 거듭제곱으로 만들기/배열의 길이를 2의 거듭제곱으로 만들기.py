@@ -1,7 +1,7 @@
 from math import pow
 
 def solution(arr):
-    powers = [1, 2, 4, 8, 16, 32, 64, 128, 256, 512, 1024]
+    powers = [2 ** i for i in range(0, 11)]
     
     for i in powers:
         if len(arr) <= i:
