@@ -1,13 +1,10 @@
 def solution(rank, attendance):
     tmp = []
     
-    for r, is_attended in zip(rank, attendance):
+    for i, (r, is_attended) in enumerate(zip(rank, attendance)):
         if is_attended == True:
-            tmp.append(r)
+            tmp.append([r, i])
             
     tmp = sorted(tmp)
-    a = rank.index(tmp[0])
-    b = rank.index(tmp[1])
-    c = rank.index(tmp[2])
     
-    return 10000 * a + 100 * b + c
+    return 10000 * tmp[0][1] + 100 * tmp[1][1] + tmp[2][1]
