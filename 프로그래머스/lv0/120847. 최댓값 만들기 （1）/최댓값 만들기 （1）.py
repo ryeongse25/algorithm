@@ -1,3 +1,3 @@
 def solution(numbers):
-    
-    return sorted(numbers)[-1] * sorted(numbers)[-2]
+    numbers.sort(reverse = True)
+    return numbers[0] * numbers[1]
