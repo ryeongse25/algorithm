@@ -1,11 +1,6 @@
 def solution(my_string):
     new_string = ''
     for c in my_string:
-        if not c.isdigit():
-            new_string += '*'
-        else:
-            new_string += c
+        new_string += c if c.isdigit() else '*'
     numbers = new_string.split('*')
-    numbers = [i for i in numbers if i != '']
-    numbers = map(int, numbers)
-    return sum(numbers)
+    return sum([int(i) for i in numbers if i != ''])
