@@ -2,8 +2,7 @@ def solution(quiz):
     result = []
     
     for q in quiz:
-        l = q.split('=')
-        if eval(l[0]) == int(l[1]):
+        if eval(q.replace('=', '==')):
             result.append('O')
         else:
             result.append('X')
