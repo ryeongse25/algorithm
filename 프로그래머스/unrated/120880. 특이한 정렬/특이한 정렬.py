@@ -1,14 +1,15 @@
 def solution(numlist, n):
-    answer = []
-    diff = [[] for _ in range(10001)]
+#     answer = []
+#     diff = [[] for _ in range(10001)]
     
-    for i in numlist:
-        diff[abs(n-i)].append(i)
+#     for i in numlist:
+#         diff[abs(n-i)].append(i)
     
-    for numbers in diff:
-        numbers.sort(reverse=True)
-        answer += numbers
+#     for numbers in diff:
+#         numbers.sort(reverse=True)
+#         answer += numbers
     
-    return answer
+#     return answer
+    return sorted(numlist, key=lambda x:(abs(n-x), n-x))
     
     
