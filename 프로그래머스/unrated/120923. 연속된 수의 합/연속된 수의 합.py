@@ -5,9 +5,5 @@ def solution(num, total):
         d += i
     
     first_num = (total - d) // num
-    answer = []
     
-    for i in range(first_num, first_num + num):
-        answer.append(i)
-    
-    return answer
+    return [i for i in range(first_num, first_num + num)]
