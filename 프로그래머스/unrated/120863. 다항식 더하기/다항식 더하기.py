@@ -12,13 +12,15 @@ def solution(polynomial):
                 x += int(i[:len(i) - 1])    
         else:
             c += int(i)
-    
-    if x != 0 and x != 1:
-        answer += str(x) + 'x'
+            
     if x == 1:
         answer += 'x'
+    elif x != 0:
+        answer += str(x) + 'x'
+
     if x != 0 and c != 0:
         answer += ' + '
+        
     if c != 0:
         answer += str(c)
     
