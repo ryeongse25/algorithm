@@ -1,12 +1,7 @@
 def solution(A, B):
-    if A == B:
-        return 0
-    
     words = []
     
-    for i in range(len(A)):
-        words.append(A[i:] + A[:i])
-        
-    words.reverse()
+    for i in range(len(B)):
+        words.append(B[i:] + B[:i])
     
-    return words.index(B) + 1 if B in words else -1
+    return words.index(A) if A in words else -1
