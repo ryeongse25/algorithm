@@ -1,11 +1,8 @@
 def solution(dots):
-    first_line = [[1, 0], [2, 0], [3, 0]]
-    second_line = [[3, 2], [3, 1], [2, 1]]
+    [[x1, y1], [x2, y2], [x3, y3], [x4, y4]] = dots
     
-    for i in range(3):
-        first_m = (dots[first_line[i][0]][1] - dots[first_line[i][1]][1]) / (dots[first_line[i][0]][0] - dots[first_line[i][1]][0]) 
-        second_m = (dots[second_line[i][0]][1] - dots[second_line[i][1]][1]) / (dots[second_line[i][0]][0] - dots[second_line[i][1]][0]) 
-        if first_m == second_m:
-            return 1
+    a1 = (y1 - y2) / (x1 - x2) == (y3 - y4) / (x3 - x4)
+    a2 = (y1 - y3) / (x1 - x3) == (y2 - y4) / (x2 - x4)
+    a3 = (y1 - y4) / (x1 - x4) == (y2 - y3) / (x2 - x3)
     
-    return 0
+    return 1 if a1 or a2 or a3 else 0
