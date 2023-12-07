@@ -3,9 +3,5 @@ def gcd(a, b):
         return a
     return gcd(b, a % b)
 
-def solution(n, m):
-    g = gcd(n, m)
-    n //= g
-    m //= g
-    
-    return [g, g * n * m]
+def solution(n, m):    
+    return [gcd(n, m), n * m / gcd(n, m)]
