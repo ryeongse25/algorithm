@@ -1,15 +1,14 @@
-n, m = map(int, (input().split()))
-
-strings = set()
+n, m = map(int, input().split())
+a = set()
 answer = 0
 
 for i in range(n):
-    word = input()
-    strings.add(word)
+    s = input()
+    a.add(s)
 
 for i in range(m):
-    word = input()
-    if word in strings:
+    s = input()
+    if s in a:
         answer += 1
 
 print(answer)
