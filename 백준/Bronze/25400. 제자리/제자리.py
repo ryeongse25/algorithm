@@ -1,14 +1,12 @@
 n = int(input())
 arr = list(map(int, input().split()))
 
-i = 0
-while 1:
-    if i >= len(arr):
-        break
+i = 1
+cnt = 0
+for num in arr:
+    if num == i:
+        i += 1
+    else:
+        cnt += 1
 
-    if arr[i] != i + 1:
-        del arr[i]
-        continue
-    i += 1
-
-print(n - len(arr))
+print(cnt)
