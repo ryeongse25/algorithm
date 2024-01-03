@@ -5,4 +5,4 @@ def solution(numbers):
         for j in range(i + 1, len(numbers)):
             answer.add(numbers[i] + numbers[j])
             
-    return sorted(list(answer))
+    return sorted(answer)
