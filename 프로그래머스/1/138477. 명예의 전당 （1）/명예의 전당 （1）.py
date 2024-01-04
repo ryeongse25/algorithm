@@ -3,12 +3,9 @@ def solution(k, score):
     answer = []
     
     for i in score:
-        if len(glory) < k:
-            glory.append(i)
-        else:
-            if i > min(glory):
-                glory.remove(min(glory))
-                glory.append(i)
+        glory.append(i)
+        if len(glory) > k:
+            glory.remove(min(glory))
         answer.append(min(glory))
     
     return answer
