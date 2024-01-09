@@ -1,14 +1,11 @@
-import math
+from math import ceil
 
 def solution(progresses, speeds):
     t = []
     answer = []
     
     for i, j in zip(progresses, speeds):
-        if (100 - i) / j == (100 - i) // j:
-            t.append(math.ceil(100 - i) // j)
-        else:
-            t.append((100 - i) // j + 1)
+        t.append(ceil((100 - i) / j))
 
     cnt = 1
     day = t[0]
