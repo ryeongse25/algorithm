@@ -1,17 +1,16 @@
-N = int(input())
+n = int(input())
 schedules = []
-answer, time = 0, 0
+cnt, time = 0, 0
 
-for i in range(N):
-  start, end = map(int, input().split())
-  schedules.append([start, end])
+for _ in range(n):
+    start, end = map(int, input().split())
+    schedules.append([start, end])
 
-schedules.sort(key=lambda x:x[0])
-schedules.sort(key=lambda x:x[1])
+schedules.sort(key = lambda x : (x[1], x[0]))
 
-for schedule in schedules:
-  if schedule[0] >= time:
-    time = schedule[1]
-    answer += 1
+for start, end in schedules:
+    if time <= start:
+        cnt += 1
+        time = end
 
-print(answer)
+print(cnt)
