@@ -1,21 +1,13 @@
-def binary(n, num):
-    b = ''
-    while num != 0:
-        b += str(num % 2)
-        num //= 2
-    return f'{b[::-1]:0>{n}}'
-
-
 def solution(n, arr1, arr2):
     b1 = []
     b2 = []
     answer = []
     
     for i in arr1:
-        b1.append(binary(n, i))
+        b1.append(bin(i)[2:].rjust(n, '0'))
     
     for i in arr2:
-        b2.append(binary(n, i))
+        b2.append(bin(i)[2:].rjust(n, '0'))
     
     for i, j in zip(b1, b2):
         s = ''
