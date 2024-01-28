@@ -1,9 +1,8 @@
 def solution(a, b, n):
-    answer = 0
+    free = 0
     
     while n >= a:
-        free = (n // a) * b
-        n = (n % a) + free
-        answer += free
+        free += (n // a) * b
+        n = (n % a) + (n // a) * b
     
-    return answer
+    return free
