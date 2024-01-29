@@ -1,13 +1,10 @@
 def solution(n, m, section):
-    painted = [True] * (n + 1)
-    cnt = 0
+    cnt = 1
+    prev = section[0]
     
     for i in section:
-        painted[i] = False
-    
-    for i, v in enumerate(painted):
-        if v == False:
-            painted[i:i+m] = [True] * m
+        if i - prev >= m:
+            prev = i
             cnt += 1
     
     return cnt
