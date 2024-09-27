@@ -1,6 +1,6 @@
 # [level 0] n의 배수 - 181937 
 
-[문제 링크](https://school.programmers.co.kr/learn/courses/30/lessons/181937?language=javascript) 
+[문제 링크](https://school.programmers.co.kr/learn/courses/30/lessons/181937) 
 
 ### 성능 요약
 
@@ -16,7 +16,7 @@
 
 ### 제출 일자
 
-2024년 09월 27일 11:14:44
+2024년 09월 27일 11:15:45
 
 ### 문제 설명
 
