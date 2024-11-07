@@ -7,9 +7,14 @@ public class Main {
         int L = sc.nextInt();
         char[] s = sc.next().toCharArray();
         
-        int answer = 0;
+        long answer = 0;
         for (int i = 0; i < L; i++) {
-            answer += ((int) s[i] - 96) * Math.pow(31, i);
+            long temp = 1;
+            for (int j = 0; j < i; j++) {
+                temp = temp * 31 % 1234567891;
+            }
+            
+            answer += ((int)s[i] - 96) * temp;
         }
         
         System.out.println(answer % 1234567891);
